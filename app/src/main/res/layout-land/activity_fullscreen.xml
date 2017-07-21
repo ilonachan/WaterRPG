@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context="jimdo.gladsoft.waterrpg.FullscreenActivity">
+
+    <jimdo.gladsoft.waterrpg.OverworldCanvas
+        android:id="@+id/owCanvas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="#FFFFFF" />
+
+    <RelativeLayout
+        android:id="@+id/textBubble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/speech_bubble" />
+
+        <TextView
+            android:id="@+id/textBubbleContentTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="sans-serif"
+            android:text="Message Dummy"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/questionAnswerSelButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/answer1Btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Answer 1" />
+
+        <Button
+            android:id="@+id/answer2Btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Answer 2" />
+
+        <Button
+            android:id="@+id/answer3Btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Answer 3" />
+        <Button
+            android:id="@+id/answer4Btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Answer 4" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ctrlButtons"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:id="@+id/ctrlCenter"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:srcCompat="@drawable/noaction" />
+
+        <ImageView
+            android:id="@+id/btnLeft"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/ctrlCenter"
+            app:srcCompat="@drawable/arrow_left" />
+
+        <ImageView
+            android:id="@+id/btnRight"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/ctrlCenter"
+            app:srcCompat="@drawable/arrow_right" />
+
+        <ImageView
+            android:id="@+id/btnDown"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_below="@+id/ctrlCenter"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/arrow_down" />
+
+        <ImageView
+            android:id="@+id/btnUp"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_above="@+id/ctrlCenter"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/arrow_up" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
